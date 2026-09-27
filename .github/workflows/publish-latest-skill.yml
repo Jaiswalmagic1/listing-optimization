@@ -1,0 +1,32 @@
+name: Publish Latest Skill ZIP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Package latest skill
+        run: |
+          rm -rf package listing-optimization.zip
+          mkdir -p package/listing-optimization
+          cp -R skills/listing-optimization/. package/listing-optimization/
+          cd package
+          zip -r ../listing-optimization.zip listing-optimization
+
+      - name: Publish latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest listing-optimization.zip             --title "Listing Optimization - Latest"             --notes "Latest build from the main branch. This release is automatically refreshed whenever the skill is updated."
