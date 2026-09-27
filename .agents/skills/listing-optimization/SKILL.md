@@ -62,27 +62,31 @@ Ask only:
 Ask only:
 **Please provide the current Item Highlight. You can find it in Amazon Seller Central under Product Identity. It is a single field with a 125-character limit.**
 
-### 6. Description — Product Description
+### 6. Product Identity — Occasion
+Ask only:
+**Please provide the current Occasion selection. Occasion allows up to 5 selections from the Amazon dropdown.**
+
+### 7. Description — Product Description
 Ask only:
 **Please provide the current Product Description. You can find it in Amazon Seller Central under Description.**
 
-### 7. Description — Bullet Points
+### 8. Description — Bullet Points
 Ask only:
 **Please provide the current Bullet Points. You can find them in Amazon Seller Central under Description.**
 
-### 8. Product Details — Generic Keywords
+### 9. Product Details — Generic Keywords
 Ask only:
 **Please provide the current Generic Keywords. You can find them in Amazon Seller Central under Product Details.**
 
-### 9. Pendant Description
+### 10. Pendant Description
 Ask only:
 **If this listing has a pendant, please provide the current Pendant Description. It has a 100-character limit. If the product does not have a pendant, tell me that.**
 
-### 10. Main/First Listing Image
+### 11. Main/First Listing Image
 Ask only:
 **Please upload the first/main image of the listing.**
 
-### 11. Additional Listing/Product Images
+### 12. Additional Listing/Product Images
 Ask only:
 **Please upload the remaining product/listing images.**
 
@@ -253,3 +257,12 @@ For listings with a pendant, include **Pendant Description** in the Amazon optim
 - Keep it concise and product-specific.
 - Describe the pendant's relevant visible/design characteristics without unsupported material or feature claims.
 - Treat it as a separate output field; do not merge it into Item Highlight or Product Description.
+
+
+## Amazon Set Name
+
+Set Name feedback requires the manufacturer's official name for the product set. If no official name exists, summarize the type and number of components. Never invent an official manufacturer name. If the product is not a set, treat Set Name as not applicable.
+
+## Amazon Occasion
+
+Occasion is a controlled Amazon dropdown field. The optimized output may contain up to **5 selections**. Choose only occasions that are genuinely relevant to the product and supported by the listing/product context; do not add occasions solely for keyword coverage.
