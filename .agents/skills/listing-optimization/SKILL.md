@@ -20,57 +20,66 @@ description: Strict marketplace listing optimization workflow. Ask the platform 
 
 When Amazon is selected, collect the following in EXACTLY this order, one question per message. The order follows the Amazon Seller Central sections shown by the seller: Product Identity → Description → Product Details. Search-performance evidence is collected first because it drives the optimization.
 
-### 1. ASIN
+### 1. SKU
+Ask only: **Please provide the SKU ID for this listing, if available.**
+
+Use the SKU for the chat naming convention: **[SKU] - [Platform] - Listing Optimization**. If no SKU is available, use **[Platform] - Listing Optimization**. If the interface supports chat renaming, use that name; otherwise provide the suggested name to the seller.
+
+### 2. ASIN
 Ask only: **Please provide the ASIN for this listing.**
 
-### 2. ASIN-level Search Query Performance
+### 3. ASIN-level Search Query Performance
 Ask only: **Please provide the Search Query Performance data for this ASIN.**
 
-### 3. Brand-level Search Query Performance
+### 4. Brand-level Search Query Performance
 Ask only: **Please provide the Brand-level Search Query Performance data for your brand.**
 
-### 4. Product Identity — Item Name
+### 5. Product Identity — Item Name
 Ask only: **Please provide the current Item Name. You can find it in Amazon Seller Central under Product Identity.**
 
-### 5. Product Identity — Item Highlight
+### 6. Product Identity — Item Highlight
 Ask only: **Please provide the current Item Highlight. You can find it in Amazon Seller Central under Product Identity. It is a single field with a 125-character limit.**
 
-### 6. Product Identity — Occasion
+### 7. Product Identity — Occasion
 Ask only: **Please provide the current Occasion selection. You can find it in Amazon Seller Central under Product Identity. Occasion allows up to 5 selections from the Amazon dropdown.**
 
-### 7. Description — Product Description
+### 8. Description — Product Description
 Ask only: **Please provide the current Product Description. You can find it in Amazon Seller Central under Description.**
 
-### 8. Description — Bullet Points
+### 9. Description — Bullet Points
 Ask only: **Please provide the current Bullet Points. You can find them in Amazon Seller Central under Description.**
 
-### 9. Product Details — Generic Keywords
+### 10. Product Details — Generic Keywords
 Ask only: **Please provide the current Generic Keywords. You can find them in Amazon Seller Central under Product Details.**
 
-### 10. Product Details — Set Name
+### 11. Product Details — Set Name
 Ask only: **Please provide the current Set Name. You can find it in Amazon Seller Central under Product Details.**
 
-### 11. Product Details — Holiday Type
+### 12. Product Details — Holiday Type
 Ask only: **Please provide the current Holiday Type selection. You can find it in Amazon Seller Central under Product Details. Holiday Type is selected from an Amazon dropdown.**
 
-### 12. Pendant Description
+### 13. Pendant Description
 Ask only: **If this listing has a pendant, please provide the current Pendant Description. It has a 100-character limit. If the product does not have a pendant, tell me that.**
 
-### 13. Main/First Listing Image
+### 14. Main/First Listing Image
 Ask only: **Please upload the first/main image of the listing.**
 
-### 14. Additional Listing/Product Images
+### 15. Additional Listing/Product Images
 Ask only: **Please upload the remaining product/listing images. If there are no additional images, tell me that.**
 
-Do not begin analysis until all 14 steps are complete.
+Do not begin analysis until all 15 steps are complete.
 
 # Amazon Analysis
 
-Analyze the ASIN SQP, Brand SQP, current listing fields, product facts, main image, and additional images together.
+Analyze the ASIN SQP, Brand SQP, current listing fields, product facts, main image, and additional images together. Image recommendations must follow the Image Recommendation Rule; do not manufacture image problems or suggest changes without evidence.
 
 Prioritize keywords using factual relevance, ASIN performance, brand performance, search demand, impressions, ASIN share, click/cart/purchase signals, brand shares, opportunity/conversion signals, and natural placement. Search volume alone is never sufficient.
 
 Use images to verify visible product type, design, shape, color/finish, visible quantity, chains/threads/tassels/hooks/clasps, pearls/stones/beads/coins/charms, layers, patterns, and other clearly supported features. Do not treat appearance alone as proof of material/composition.
+
+# Image Recommendation Rule
+
+Never recommend changing, replacing, adding, or redesigning an image merely because a different image might look better. Suggest an image change only when there is a specific, evidence-based reason: a clear marketplace requirement/compliance issue visible in the image, an objectively identifiable product-presentation problem, or performance data that supports an image-related hypothesis (such as weak click-through relative to relevant search exposure). Clearly separate observed facts from hypotheses. If the existing images satisfy requirements and there is no meaningful evidence that an image change is needed, explicitly leave the images unchanged.
 
 # Exclusion Review
 
