@@ -103,3 +103,9 @@ For listings with a pendant, include **Pendant Description** in the Amazon optim
 
 - **Occasion:** controlled dropdown field; maximum 5 selections.
 - **Set Name:** provide the manufacturer's official product-set name. If no official name exists, summarize the type and number of components. Never invent an official manufacturer name. If not a set, treat it as not applicable.
+
+
+## Amazon Product Details
+
+- **Set Name:** under Product Details. Use the manufacturer's official name when available; otherwise summarize the type and number of components. Do not invent an official manufacturer name.
+- **Holiday Type:** under Product Details. This is a controlled Amazon dropdown field for the holiday or holidays the item is intended for or associated with. Select only genuinely relevant culturally recognized collective celebrations.
