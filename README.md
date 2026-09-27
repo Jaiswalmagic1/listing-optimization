@@ -300,3 +300,21 @@ When adding marketplace rules, keep them in the relevant marketplace reference f
 ## License
 
 Choose an appropriate open-source license before publishing this repository for public use.
+
+
+## Using the skill in ChatGPT
+
+If your ChatGPT workspace has Skills enabled:
+
+1. Open the sidebar and select **Plugins**.
+2. In the Plugin Directory, select the **Skills** tab.
+3. Select **Create** → **Upload from your computer**.
+4. Upload a ZIP whose single top-level folder is `listing-optimization`, containing `SKILL.md` and the `references` directory.
+5. Install/enable the skill.
+6. In a new chat, invoke **Listing Optimization** explicitly (for example with the skill's @-mention if shown) or simply ask to optimize a marketplace listing when the skill is enabled.
+
+The workflow then starts by asking which platform the listing is for and continues one question at a time. It does not generate final listing copy until all required inputs are collected and the keyword-exclusion checkpoint has been resolved.
+
+For the current Amazon workflow, the required inputs are ASIN, ASIN-level Search Query Performance, brand-level Search Query Performance, current listing fields, and the first/main plus additional product images.
+
+If the Skills tab is not available in your ChatGPT account or workspace, the skill cannot be installed through the ChatGPT UI on that account. The repository remains the portable source of truth and can be used with other Agent Skills-compatible tools.
