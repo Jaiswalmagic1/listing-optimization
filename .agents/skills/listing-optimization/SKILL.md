@@ -1,384 +1,229 @@
 ---
 name: listing-optimization
-description: Optimize e-commerce marketplace listings using marketplace-specific rules, search performance data, existing listing content, and product images. Ask for the marketplace first, collect required inputs one question at a time, do not generate final copy until all required inputs are received, and review proposed keyword exclusions with the seller before final output.
+description: Strict marketplace listing optimization workflow. Ask the platform first, then collect required inputs exactly one question at a time. Never optimize during intake. Before final output, present important keyword exclusions for seller approval.
 ---
 
 # Listing Optimization
 
-## Mission
+## Mandatory conversation rules
 
-Produce accurate, marketplace-specific listing optimization based on the actual product, available search-performance evidence, existing listing content, and product images.
+1. At the start of every new run, ask ONLY:
+   **Which platform is this listing for — Amazon, Meesho, Flipkart, or Other?**
 
-The seller remains in control. The skill should explain important exclusions before final generation and allow the seller to override them.
+2. After the platform is selected, ask exactly ONE required input per message.
+   - Wait for the user's answer.
+   - Then ask the next input.
+   - Never list future inputs.
+   - Never ask for multiple files/details in one message.
 
-## Mandatory conversation workflow
+3. During intake, ONLY acknowledge the received input and ask for the next single input.
+   Do not:
+   - optimize or rewrite listing content
+   - analyze keywords
+   - audit the listing
+   - recommend changes
+   - preview the final strategy
+   - infer the product from previous chats
+   - refer to a previous product as the current product
 
-### Rule 1: Ask platform first
+4. The current run's inputs are the only source of truth.
 
-At the beginning of every new optimization run, ask exactly one question:
+5. After all required inputs are received, analyze them together.
 
-> Which platform is this listing for? (Amazon, Meesho, Flipkart, or Other)
+6. Before generating final listing content, show important proposed keyword/attribute exclusions with a concrete reason for each, then ask:
+   **Do you want to override any of these exclusions?**
+   Wait for the seller's response.
 
-Do not request ASIN, listing fields, keywords, or images until the platform is known.
+7. Never introduce unsupported or false product claims, even if a keyword has high search demand.
 
-### Rule 2: One question at a time
+---
 
-Ask for only one information item at a time. Wait for the user's answer before asking for the next item.
+# Amazon Workflow
 
-Do not provide a checklist of all required inputs in one message.
+When the user selects Amazon, ask these inputs in EXACTLY this order, one per message:
 
-### Rule 3: No premature optimization
-
-Do not draft, rewrite, rank keywords, or provide final listing content while required inputs are still missing.
-
-You may acknowledge receipt of information, but do not start the optimization output.
-
-### Rule 4: Do not invent missing facts
-
-Never assume a material, size, quantity, closure, set composition, feature, certification, or other product attribute from a keyword alone.
-
-Use explicit user-provided information and visible image evidence. Clearly distinguish what is visible, stated, inferred, and unknown.
-
-## Amazon input sequence
-
-After the user selects Amazon, request these inputs in order, one at a time:
-
-1. ASIN.
-2. ASIN-level Search Query Performance data.
-3. Brand-level Search Query Performance data.
-4. Current Item Name.
-5. Current Product Description.
-6. Current Bullet Points.
-7. Current Generic Keywords.
-8. Current Item Highlight.
-9. Main/first listing image.
-10. Other listing/product images.
-
-If a later input is absent or unusable, request that specific input and do not proceed to final optimization.
-
-## Amazon analysis
-
-Use the Amazon reference file for detailed marketplace rules.
-
-Analyze:
-
-- ASIN Search Query Performance.
-- Brand Search Query Performance.
-- Existing listing content.
-- Main and secondary images.
-- Product facts explicitly supplied by the seller.
-- Search demand and performance signals.
-- Keyword relevance and semantic fit.
-- Existing listing coverage and repetition.
-
-Prioritize keywords using a combination of relevance, search demand, ASIN performance, brand performance, and verified product fit. Do not treat high volume as sufficient evidence of suitability.
-
-### Keyword signals
-
-Consider, when available:
-
-- Search Query.
-- Search Query Score.
-- Search Query Volume.
-- Impressions.
-- ASIN impression share.
-- Click share.
-- Cart-add share.
-- Purchase share.
-- Brand impression share.
-- Brand click share.
-- Brand cart-add share.
-- Brand purchase share.
-- Explicit opportunity flags such as high-demand/low-visibility or good-conversion signals.
-
-Do not fabricate missing metrics.
-
-## Image analysis
-
-Review the first/main image and other listing images to verify or identify visible attributes, such as:
-
-- Product type.
-- Shape and design.
-- Color/finish.
-- Number of visible components.
-- Chains, threads, tassels, hooks, clasps, or other closures.
-- Pearls, stones, beads, coins, charms, or motifs.
-- Layers.
-- Pattern.
-- Relative size where the image supports it.
-
-Images are evidence, but image appearance alone should not be treated as definitive proof of composition or material when the claim requires information not visible in the image.
-
-## Exclusion review: mandatory checkpoint
-
-Before generating final listing content, identify meaningful keywords or attributes that you intend to exclude.
-
-For every proposed exclusion, provide:
-
-- Keyword/term.
-- Reason for exclusion.
-- Whether the concern is product mismatch, unverified attribute, misleading implication, duplication, or another concrete reason.
-
-Then ask the seller whether they want to override any exclusion.
-
-Example:
-
-> Proposed exclusions:
-> - german silver — material not confirmed.
-> - ghungroo — no visible ghungroo feature.
-> - choker set — product appears to be a single item.
->
-> Do you want to use any of these despite the recommendation?
-
-Do not generate the final optimized listing until the seller has had an opportunity to respond to this checkpoint.
-
-If the seller overrides an exclusion, use it only where it can be incorporated without making a false product claim, unless the seller also provides the missing fact that establishes the attribute.
-
-## Final Amazon output
-
-After all inputs are received and the exclusion checkpoint is resolved, return:
-
-1. **Updated Item Name**
-2. **Updated Product Description**
-3. **Updated Bullet Points**
-4. **Updated Generic Keywords**
-5. **Updated Item Highlight**
-
-Also include a compact rationale covering the main keyword strategy and important changes.
-
-Do not produce prohibited or unsupported product claims.
-
-## Generic keyword handling
-
-Generic keywords should contain relevant customer-search terms without unnecessary repetition.
-
-Do not use:
-
-- Competitor brand names.
-- ASINs.
-- Irrelevant keywords.
-- Unsupported product attributes.
-- Repetitive variants solely to inflate term count.
-- Misleading terms that imply a different product type, material, quantity, or configuration.
-
-Marketplace-specific search-term limits and formatting rules belong in the marketplace reference file.
-
-## Extension to additional marketplaces
-
-For Meesho, Flipkart, and future marketplaces:
-
-1. Keep the same core rules for platform-first selection, one-question-at-a-time intake, no premature generation, factual verification, image review, and exclusion approval.
-2. Use the marketplace-specific reference file for required inputs, fields, terminology, character limits, and other rules.
-3. Never import Amazon-specific field rules into another marketplace unless the relevant reference explicitly says to do so.
-
-## Quality gate before final output
-
-Before finalizing, verify:
-
-- All required inputs were received.
-- The selected marketplace is correct.
-- Product claims match supplied facts and images.
-- Important exclusions were presented to the seller.
-- Any seller overrides were respected where factually supportable.
-- Keywords are relevant and naturally integrated.
-- Required output fields are all present.
-- No competitor brand names or ASINs appear in generic keywords.
-- No unsupported attributes were introduced.## Mandatory workflow
-
-This skill is a sequential intake workflow. **Ask exactly one question per message and wait for the answer.**
-
-### First question
-
+### 1. ASIN
 Ask only:
+**Please provide the ASIN for this listing.**
 
-**Which platform is this listing for — Amazon, Meesho, Flipkart, or Other?**
+### 2. ASIN-level Search Query Performance
+Ask only:
+**Please provide the Search Query Performance data for this ASIN.**
 
-Do not include a checklist or any additional request.
+### 3. Brand-level Search Query Performance
+Ask only:
+**Please provide the Brand-level Search Query Performance data for your brand.**
 
-### After platform selection
+### 4. Current Item Name
+Ask only:
+**Please provide the current Item Name.**
 
-Ask the next required input as a single question. Do not list future inputs.
+### 5. Current Product Description
+Ask only:
+**Please provide the current Product Description.**
 
-For Amazon, use this exact sequence:
+### 6. Current Bullet Points
+Ask only:
+**Please provide the current Bullet Points.**
 
-1. **ASIN** — ask only for the ASIN.
-2. **ASIN-level Search Query Performance data** — ask only for this data.
-3. **Brand-level Search Query Performance data** — ask only for this data.
-4. **Current Item Name** — ask only for the current Item Name.
-5. **Current Product Description** — ask only for the current Product Description.
-6. **Current Bullet Points** — ask only for the current Bullet Points.
-7. **Current Generic Keywords** — ask only for the current Generic Keywords.
-8. **Current Item Highlight** — ask only for the current Item Highlight.
-9. **Main/first listing image** — ask only for the main image.
-10. **Other listing/product images** — ask only for the remaining images. If there are none, accept that answer.
+### 7. Current Generic Keywords
+Ask only:
+**Please provide the current Generic Keywords.**
 
-After each answer, acknowledge receipt briefly and ask only the next single question.
+### 8. Current Item Highlight
+Ask only:
+**Please provide the current Item Highlight.**
 
-### Strict no-generation rule
+### 9. Main/First Listing Image
+Ask only:
+**Please upload the first/main image of the listing.**
 
-Until every required input above has been received:
+### 10. Additional Listing/Product Images
+Ask only:
+**Please upload the remaining product/listing images.**
 
-- Do not optimize.
-- Do not rewrite any field.
-- Do not analyze keywords.
-- Do not provide recommendations.
-- Do not provide an audit.
-- Do not summarize what the final listing will contain.
-- Do not ask for multiple inputs.
-- Do not refer to a previous product or previous conversation as the current product.
+If there are no additional images, accept that answer and continue.
 
-The only permitted action during intake is to acknowledge the received input and ask for the next required input.
+Do not begin analysis until all 10 steps are complete.
 
-### Completion gate
+---
 
-After the final image input is received, verify that all required inputs are present. Only then begin the analysis.
+# Amazon Analysis
 
-### Exclusion approval gate
+Analyze all collected evidence together:
 
-Before producing the final listing, identify important keywords/attributes that you recommend excluding, explain each reason, and ask whether the seller wants to override any exclusion.
+- ASIN-level Search Query Performance
+- Brand-level Search Query Performance
+- Current listing fields
+- Main image
+- Additional images
+- Explicit product facts supplied by the seller
 
-Wait for the seller's response.
+Prioritize keywords based on:
 
-Only after that response may the final optimized listing be generated.
+- factual product relevance
+- ASIN performance
+- brand performance
+- search demand/volume
+- impressions
+- ASIN impression share
+- click share
+- cart-add share
+- purchase share
+- brand impression/click/cart/purchase share
+- available opportunity or conversion signals
+- natural placement in the appropriate Amazon field
 
-### Final output
+Search volume alone is never sufficient.
 
-For Amazon, return only after all intake and exclusion approval steps are complete:
+Brand-level performance is useful only when the keyword is relevant to the current product.
 
-1. Updated Item Name
-2. Updated Product Description
-3. Updated Bullet Points
-4. Updated Generic Keywords
-5. Updated Item Highlight
-6. Brief optimization notes
+## Product verification
 
-Do not introduce unsupported product claims.
+Use supplied facts and images to verify visible/product-supported details such as:
 
-## Amazon analysis
+- product type
+- design and shape
+- color/finish
+- visible quantity
+- chains, threads, tassels, hooks, clasps and closures
+- pearls, stones, beads, coins, charms and motifs
+- layers and patterns
+- other clearly supported visible features
 
-Use the Amazon reference file for detailed marketplace rules.
+Do not treat visual appearance alone as proof of material/composition when that fact cannot be established from the evidence.
 
-Analyze:
+## Exclusion review
 
-- ASIN Search Query Performance.
-- Brand Search Query Performance.
-- Existing listing content.
-- Main and secondary images.
-- Product facts explicitly supplied by the seller.
-- Search demand and performance signals.
-- Keyword relevance and semantic fit.
-- Existing listing coverage and repetition.
+Before final generation, identify important terms/attributes that should be excluded.
 
-Prioritize keywords using a combination of relevance, search demand, ASIN performance, brand performance, and verified product fit. Do not treat high volume as sufficient evidence of suitability.
+Typical reasons include:
 
-### Keyword signals
+- product mismatch
+- unsupported attribute
+- misleading implication
+- different product type
+- different quantity/configuration
+- competitor brand
+- ASIN
+- irrelevant search intent
+- unnecessary duplication
 
-Consider, when available:
+For every proposed exclusion, state the term and the reason.
 
-- Search Query.
-- Search Query Score.
-- Search Query Volume.
-- Impressions.
-- ASIN impression share.
-- Click share.
-- Cart-add share.
-- Purchase share.
-- Brand impression share.
-- Brand click share.
-- Brand cart-add share.
-- Brand purchase share.
-- Explicit opportunity flags such as high-demand/low-visibility or good-conversion signals.
+Then ask exactly:
+**Do you want to override any of these exclusions?**
 
-Do not fabricate missing metrics.
+Wait for the seller's answer before generating the final listing.
 
-## Image analysis
+---
 
-Review the first/main image and other listing images to verify or identify visible attributes, such as:
+# Amazon Final Output
 
-- Product type.
-- Shape and design.
-- Color/finish.
-- Number of visible components.
-- Chains, threads, tassels, hooks, clasps, or other closures.
-- Pearls, stones, beads, coins, charms, or motifs.
-- Layers.
-- Pattern.
-- Relative size where the image supports it.
+Only after all inputs are received AND the exclusion checkpoint is resolved, provide:
 
-Images are evidence, but image appearance alone should not be treated as definitive proof of composition or material when the claim requires information not visible in the image.
+## Updated Item Name
 
-## Exclusion review: mandatory checkpoint
+## Updated Product Description
 
-Before generating final listing content, identify meaningful keywords or attributes that you intend to exclude.
+## Updated Bullet Points
 
-For every proposed exclusion, provide:
+## Updated Generic Keywords
 
-- Keyword/term.
-- Reason for exclusion.
-- Whether the concern is product mismatch, unverified attribute, misleading implication, duplication, or another concrete reason.
+## Updated Item Highlight
 
-Then ask the seller whether they want to override any exclusion.
+## Optimization Notes
 
-Example:
+Keep the notes brief and explain the main keyword strategy, important listing changes, exclusions, and any seller-approved overrides.
 
-> Proposed exclusions:
-> - german silver — material not confirmed.
-> - ghungroo — no visible ghungroo feature.
-> - choker set — product appears to be a single item.
->
-> Do you want to use any of these despite the recommendation?
+Do not provide an overall score, ranking, or unsupported performance prediction.
 
-Do not generate the final optimized listing until the seller has had an opportunity to respond to this checkpoint.
+---
 
-If the seller overrides an exclusion, use it only where it can be incorporated without making a false product claim, unless the seller also provides the missing fact that establishes the attribute.
+# Generic Keyword Rules
 
-## Final Amazon output
+Do not include:
 
-After all inputs are received and the exclusion checkpoint is resolved, return:
+- competitor brand names
+- ASINs
+- irrelevant terms
+- unsupported attributes
+- misleading terms
+- excessive repetition
+- terms describing a different product type, material, quantity, or configuration
 
-1. **Updated Item Name**
-2. **Updated Product Description**
-3. **Updated Bullet Points**
-4. **Updated Generic Keywords**
-5. **Updated Item Highlight**
+Follow marketplace-specific limits and formatting rules from the relevant reference.
 
-Also include a compact rationale covering the main keyword strategy and important changes.
+---
 
-Do not produce prohibited or unsupported product claims.
+# Meesho and Flipkart
 
-## Generic keyword handling
+When Meesho or Flipkart is selected:
 
-Generic keywords should contain relevant customer-search terms without unnecessary repetition.
+- Ask platform-specific required inputs one at a time.
+- Do not use Amazon field names/rules unless the marketplace reference explicitly supports them.
+- Collect the main image and additional images separately.
+- Do not generate anything until all required inputs are received.
+- Run the same exclusion approval checkpoint.
+- Generate only fields appropriate to that marketplace.
 
-Do not use:
+Use the corresponding marketplace reference file for marketplace-specific requirements.
 
-- Competitor brand names.
-- ASINs.
-- Irrelevant keywords.
-- Unsupported product attributes.
-- Repetitive variants solely to inflate term count.
-- Misleading terms that imply a different product type, material, quantity, or configuration.
+---
 
-Marketplace-specific search-term limits and formatting rules belong in the marketplace reference file.
+# Final Quality Gate
 
-## Extension to additional marketplaces
+Before final output, verify:
 
-For Meesho, Flipkart, and future marketplaces:
-
-1. Keep the same core rules for platform-first selection, one-question-at-a-time intake, no premature generation, factual verification, image review, and exclusion approval.
-2. Use the marketplace-specific reference file for required inputs, fields, terminology, character limits, and other rules.
-3. Never import Amazon-specific field rules into another marketplace unless the relevant reference explicitly says to do so.
-
-## Quality gate before final output
-
-Before finalizing, verify:
-
-- All required inputs were received.
-- The selected marketplace is correct.
-- Product claims match supplied facts and images.
-- Important exclusions were presented to the seller.
-- Any seller overrides were respected where factually supportable.
-- Keywords are relevant and naturally integrated.
-- Required output fields are all present.
-- No competitor brand names or ASINs appear in generic keywords.
-- No unsupported attributes were introduced.
+- correct marketplace
+- every required input received
+- no multiple-input request was made
+- no early optimization was provided
+- product claims are supported
+- images were reviewed
+- keyword strategy uses performance evidence and product relevance
+- important exclusions were shown
+- seller overrides were considered
+- final fields are complete
+- generic keywords contain no competitor brands or ASINs
+- no unsupported attributes were introduced
