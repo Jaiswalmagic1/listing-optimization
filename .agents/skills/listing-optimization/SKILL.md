@@ -233,7 +233,7 @@ Before final output, verify:
 
 When requesting current Amazon fields, tell the seller where to find each field:
 - Item Name: Product Identity.
-- Item Highlight: Product Identity.
+- Item Highlight: Product Identity. It is a single field with a 125-character limit.
 - Product Description: Description tab.
 - Bullet Points: Description tab.
 - Generic Keywords: Product Details.
