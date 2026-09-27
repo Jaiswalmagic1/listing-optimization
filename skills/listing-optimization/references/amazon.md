@@ -97,3 +97,9 @@ For listings with a pendant, include **Pendant Description** in the Amazon optim
 - Keep it concise and product-specific.
 - Describe the pendant's relevant visible/design characteristics without unsupported material or feature claims.
 - Treat it as a separate output field; do not merge it into Item Highlight or Product Description.
+
+
+## Amazon Occasion and Set Name
+
+- **Occasion:** controlled dropdown field; maximum 5 selections.
+- **Set Name:** provide the manufacturer's official product-set name. If no official name exists, summarize the type and number of components. Never invent an official manufacturer name. If not a set, treat it as not applicable.
