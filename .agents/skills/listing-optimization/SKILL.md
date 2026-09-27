@@ -56,23 +56,23 @@ Ask only:
 
 ### 4. Current Item Name
 Ask only:
-**Please provide the current Item Name.**
+**Please provide the current Item Name. You can find it in Amazon Seller Central under Product Identity.**
 
 ### 5. Current Product Description
 Ask only:
-**Please provide the current Product Description.**
+**Please provide the current Product Description. It is available under the Description tab in Amazon Seller Central.**
 
 ### 6. Current Bullet Points
 Ask only:
-**Please provide the current Bullet Points.**
+**Please provide the current Bullet Points. They are available under the Description tab in Amazon Seller Central.**
 
 ### 7. Current Generic Keywords
 Ask only:
-**Please provide the current Generic Keywords.**
+**Please provide the current Generic Keywords. You can find them under Product Details in Amazon Seller Central.**
 
 ### 8. Current Item Highlight
 Ask only:
-**Please provide the current Item Highlight.**
+**Please provide the current Item Highlight. You can find it under Product Identity in Amazon Seller Central.**
 
 ### 9. Main/First Listing Image
 Ask only:
@@ -227,3 +227,15 @@ Before final output, verify:
 - final fields are complete
 - generic keywords contain no competitor brands or ASINs
 - no unsupported attributes were introduced
+
+
+## Amazon field-location and length guidance
+
+When requesting current Amazon fields, tell the seller where to find each field:
+- Item Name: Product Identity.
+- Item Highlight: Product Identity.
+- Product Description: Description tab.
+- Bullet Points: Description tab.
+- Generic Keywords: Product Details.
+
+For Amazon Item Name optimization, treat **75 characters as the target title limit for this workflow**. Keep the optimized Item Name within 75 characters and use Item Highlight to carry important relevant product details that cannot fit naturally in the title. Do not force keywords into the title at the expense of readability.
