@@ -40,7 +40,7 @@ description: Strict marketplace listing optimization workflow. Ask the platform 
 
 # Amazon Workflow
 
-When the user selects Amazon, ask these inputs in EXACTLY this order, one per message. The order follows the way the fields are grouped in Amazon Seller Central, while search-performance data is collected first because it is the optimization evidence.
+When the user selects Amazon, ask these inputs in EXACTLY this order, one per message. The order follows the section order shown in Amazon Seller Central: Product Identity, Description, Product Details, then listing images. Search-performance data is collected first because it is the optimization evidence.
 
 ### 1. ASIN
 Ask only:
@@ -54,23 +54,23 @@ Ask only:
 Ask only:
 **Please provide the Brand-level Search Query Performance data for your brand.**
 
-### 4. Item Name — Product Identity
+### 4. Product Identity — Item Name
 Ask only:
 **Please provide the current Item Name. You can find it in Amazon Seller Central under Product Identity.**
 
-### 5. Item Highlight — Product Identity
+### 5. Product Identity — Item Highlight
 Ask only:
 **Please provide the current Item Highlight. You can find it in Amazon Seller Central under Product Identity. It is a single field with a 125-character limit.**
 
-### 6. Product Description — Description tab
+### 6. Description — Product Description
 Ask only:
-**Please provide the current Product Description. You can find it in Amazon Seller Central under the Description tab.**
+**Please provide the current Product Description. You can find it in Amazon Seller Central under Description.**
 
-### 7. Bullet Points — Description tab
+### 7. Description — Bullet Points
 Ask only:
-**Please provide the current Bullet Points. You can find them in Amazon Seller Central under the Description tab.**
+**Please provide the current Bullet Points. You can find them in Amazon Seller Central under Description.**
 
-### 8. Generic Keywords — Product Details
+### 8. Product Details — Generic Keywords
 Ask only:
 **Please provide the current Generic Keywords. You can find them in Amazon Seller Central under Product Details.**
 
