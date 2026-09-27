@@ -74,11 +74,15 @@ Ask only:
 Ask only:
 **Please provide the current Generic Keywords. You can find them in Amazon Seller Central under Product Details.**
 
-### 9. Main/First Listing Image
+### 9. Pendant Description
+Ask only:
+**If this listing has a pendant, please provide the current Pendant Description. It has a 100-character limit. If the product does not have a pendant, tell me that.**
+
+### 10. Main/First Listing Image
 Ask only:
 **Please upload the first/main image of the listing.**
 
-### 10. Additional Listing/Product Images
+### 11. Additional Listing/Product Images
 Ask only:
 **Please upload the remaining product/listing images.**
 
@@ -239,3 +243,13 @@ When requesting current Amazon fields, tell the seller where to find each field:
 - Generic Keywords: Product Details.
 
 For Amazon Item Name optimization, treat **75 characters as the target title limit for this workflow**. Keep the optimized Item Name within 75 characters and use Item Highlight to carry important relevant product details that cannot fit naturally in the title. Do not force keywords into the title at the expense of readability.
+
+## Amazon Pendant Description
+
+For listings with a pendant, include **Pendant Description** in the Amazon optimization output.
+
+- Field: Pendant Description
+- Maximum length: **100 characters**
+- Keep it concise and product-specific.
+- Describe the pendant's relevant visible/design characteristics without unsupported material or feature claims.
+- Treat it as a separate output field; do not merge it into Item Highlight or Product Description.
