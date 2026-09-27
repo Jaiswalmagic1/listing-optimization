@@ -40,7 +40,7 @@ description: Strict marketplace listing optimization workflow. Ask the platform 
 
 # Amazon Workflow
 
-When the user selects Amazon, ask these inputs in EXACTLY this order, one per message:
+When the user selects Amazon, ask these inputs in EXACTLY this order, one per message. The order follows the way the fields are grouped in Amazon Seller Central, while search-performance data is collected first because it is the optimization evidence.
 
 ### 1. ASIN
 Ask only:
@@ -54,25 +54,25 @@ Ask only:
 Ask only:
 **Please provide the Brand-level Search Query Performance data for your brand.**
 
-### 4. Current Item Name
+### 4. Item Name — Product Identity
 Ask only:
 **Please provide the current Item Name. You can find it in Amazon Seller Central under Product Identity.**
 
-### 5. Current Product Description
+### 5. Item Highlight — Product Identity
 Ask only:
-**Please provide the current Product Description. It is available under the Description tab in Amazon Seller Central.**
+**Please provide the current Item Highlight. You can find it in Amazon Seller Central under Product Identity. It is a single field with a 125-character limit.**
 
-### 6. Current Bullet Points
+### 6. Product Description — Description tab
 Ask only:
-**Please provide the current Bullet Points. They are available under the Description tab in Amazon Seller Central.**
+**Please provide the current Product Description. You can find it in Amazon Seller Central under the Description tab.**
 
-### 7. Current Generic Keywords
+### 7. Bullet Points — Description tab
 Ask only:
-**Please provide the current Generic Keywords. You can find them under Product Details in Amazon Seller Central.**
+**Please provide the current Bullet Points. You can find them in Amazon Seller Central under the Description tab.**
 
-### 8. Current Item Highlight
+### 8. Generic Keywords — Product Details
 Ask only:
-**Please provide the current Item Highlight. You can find it under Product Identity in Amazon Seller Central.**
+**Please provide the current Generic Keywords. You can find them in Amazon Seller Central under Product Details.**
 
 ### 9. Main/First Listing Image
 Ask only:
