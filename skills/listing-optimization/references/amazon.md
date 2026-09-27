@@ -1,111 +1,83 @@
 # Amazon Listing Optimization Reference
 
-## Required inputs
+## Seller Central section order
 
-Collect, one at a time:
+Use this order when collecting current listing fields:
 
-1. ASIN
-2. ASIN-level Search Query Performance data
-3. Brand-level Search Query Performance data
-4. Current Item Name
-5. Current Product Description
-6. Current Bullet Points
-7. Current Generic Keywords
-8. Current Item Highlight
-9. Main/first listing image
-10. Other listing/product images
+1. **Product Identity**
+   - Item Name — maximum 75 characters for this workflow.
+   - Item Highlight — one single field, maximum 125 characters.
+   - Occasion — controlled dropdown, maximum 5 selections.
 
-## Final fields
+2. **Description**
+   - Product Description.
+   - Bullet Points.
 
-Return:
+3. **Product Details**
+   - Generic Keywords.
+   - Set Name.
+   - Holiday Type — controlled dropdown.
 
-- Item Name
-- Product Description
-- Bullet Points
-- Generic Keywords
-- Item Highlight
+4. **Additional product field**
+   - Pendant Description — maximum 100 characters, when applicable.
+
+5. **Images**
+   - Main/first listing image.
+   - Additional listing/product images.
 
 ## Keyword methodology
 
-Use ASIN-level and brand-level Search Query Performance together.
+Use ASIN-level and Brand-level Search Query Performance together. Prioritize factual product relevance first, then ASIN performance, brand performance, demand, visibility, clicks, cart adds, purchases, and natural placement.
 
-Prioritize relevant terms using:
+High search volume alone does not make a keyword suitable.
 
-1. Product relevance and factual fit.
-2. ASIN-level performance.
-3. Brand-level performance.
-4. Search volume/demand.
-5. Visibility opportunities.
-6. Click, cart-add, and purchase signals.
-7. Natural placement in the relevant Amazon field.
+## Exclusion review
 
-Do not equate search volume with suitability.
-
-If a query contains an attribute that is not supported by the product, flag it for exclusion rather than inserting it merely because it performs well.
-
-## Exclusion examples
-
-Common reasons to exclude a query include:
-
-- Product is not a set but query says set.
-- Product does not contain ghungroo.
-- Product is not layered.
-- Material is not confirmed.
-- Product does not include earrings/necklace/accessory implied by the query.
-- Query implies a quantity or configuration that is not present.
-- Query is a competitor brand or ASIN.
-- Query is irrelevant despite search demand.
-
-Always show important exclusions before final generation and ask whether the seller wants to override them.
-
-## Amazon Seller Central field locations
-
-- Item Name: Product Identity.
-- Item Highlight: Product Identity. It is a single field with a 125-character limit.
-- Product Description: Description tab.
-- Bullet Points: Description tab.
-- Generic Keywords: Product Details.
-
-For this workflow, keep the optimized Amazon Item Name within **75 characters**. Important relevant details that do not fit naturally in the title should be considered for the single Item Highlight field, which has a 125-character limit.
-
-## Existing listing review
-
-Compare the current fields against the keyword evidence. Identify:
-
-- Strong relevant terms missing from visible fields.
-- Overused or redundant terms.
-- Unsupported claims.
-- Important product attributes missing from the copy.
-- Opportunities to improve clarity and search relevance.
+Flag terms when the product is not a set, lacks a named feature, material is not confirmed, quantity/configuration differs, product type differs, the query is irrelevant, or it contains a competitor brand/ASIN. Always show important exclusions before final generation and ask whether the seller wants to override them.
 
 ## Image review
 
 Use the first image and additional images to verify visible product characteristics. Do not claim composition/material from appearance alone when it is not established.
 
-## Output guidance
+## Field rules
 
-Keep copy customer-readable. Avoid keyword stuffing. Use the strongest relevant terms naturally in the appropriate fields. Generic keywords should avoid competitor brands, ASINs, and unnecessary repetition.
+### Item Name
+Keep within **75 characters**. Use Item Highlight for important relevant details that cannot fit naturally in the title. Do not force keywords at the expense of readability.
 
+### Item Highlight
+One single field, maximum **125 characters**. Use it for concise product features/details not already adequately represented by the title.
 
+### Occasion
+Controlled Amazon dropdown. Up to **5 selections**. Select only genuinely relevant occasions supported by the product/context.
 
-## Amazon Pendant Description
+### Product Description
+Customer-facing paragraph describing unique features, product line details, and specifications without unsupported claims.
 
-For listings with a pendant, include **Pendant Description** in the Amazon optimization output.
+### Bullet Points
+Customer-facing feature/benefit bullets. Do not use unsupported attributes or unnecessary keyword stuffing.
 
-- Field: Pendant Description
-- Maximum length: **100 characters**
-- Keep it concise and product-specific.
-- Describe the pendant's relevant visible/design characteristics without unsupported material or feature claims.
-- Treat it as a separate output field; do not merge it into Item Highlight or Product Description.
+### Generic Keywords
+Relevant customer-search terms without competitor brands, ASINs, irrelevant terms, unsupported attributes, or unnecessary repetition.
 
+### Set Name
+Located under Product Details. Provide the manufacturer's official product-set name when available. If no official name exists, summarize the type and number of components. Never invent an official manufacturer name. If the product is not a set, treat as not applicable.
 
-## Amazon Occasion and Set Name
+### Holiday Type
+Located under Product Details. Select the appropriate holiday or holidays from Amazon's controlled dropdown. Holidays should be culturally recognized collective celebrations and genuinely associated with the item/context. Do not select holidays solely for keyword coverage.
 
-- **Occasion:** controlled dropdown field; maximum 5 selections.
-- **Set Name:** provide the manufacturer's official product-set name. If no official name exists, summarize the type and number of components. Never invent an official manufacturer name. If not a set, treat it as not applicable.
+### Pendant Description
+Maximum **100 characters** when applicable. Keep concise and product-specific. Describe relevant visible/design characteristics without unsupported material or feature claims.
 
+## Output
 
-## Amazon Product Details
-
-- **Set Name:** under Product Details. Use the manufacturer's official name when available; otherwise summarize the type and number of components. Do not invent an official manufacturer name.
-- **Holiday Type:** under Product Details. This is a controlled Amazon dropdown field for the holiday or holidays the item is intended for or associated with. Select only genuinely relevant culturally recognized collective celebrations.
+Return:
+- Updated Item Name
+- Updated Item Highlight
+- Updated Occasion
+- Updated Product Description
+- Updated Bullet Points
+- Updated Generic Keywords
+- Updated Set Name
+- Updated Holiday Type
+- Updated Pendant Description when applicable
+- Brief Optimization Notes
