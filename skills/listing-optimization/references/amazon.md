@@ -86,3 +86,14 @@ Use the first image and additional images to verify visible product characterist
 
 Keep copy customer-readable. Avoid keyword stuffing. Use the strongest relevant terms naturally in the appropriate fields. Generic keywords should avoid competitor brands, ASINs, and unnecessary repetition.
 
+
+
+## Amazon Pendant Description
+
+For listings with a pendant, include **Pendant Description** in the Amazon optimization output.
+
+- Field: Pendant Description
+- Maximum length: **100 characters**
+- Keep it concise and product-specific.
+- Describe the pendant's relevant visible/design characteristics without unsupported material or feature claims.
+- Treat it as a separate output field; do not merge it into Item Highlight or Product Description.
