@@ -78,15 +78,23 @@ Ask only:
 Ask only:
 **Please provide the current Generic Keywords. You can find them in Amazon Seller Central under Product Details.**
 
-### 10. Pendant Description
+### 10. Product Details — Set Name
+Ask only:
+**Please provide the current Set Name. You can find it in Amazon Seller Central under Product Details.**
+
+### 11. Product Details — Holiday Type
+Ask only:
+**Please provide the current Holiday Type selection. You can find it in Amazon Seller Central under Product Details. Holiday Type is selected from an Amazon dropdown.**
+
+### 12. Pendant Description
 Ask only:
 **If this listing has a pendant, please provide the current Pendant Description. It has a 100-character limit. If the product does not have a pendant, tell me that.**
 
-### 11. Main/First Listing Image
+### 13. Main/First Listing Image
 Ask only:
 **Please upload the first/main image of the listing.**
 
-### 12. Additional Listing/Product Images
+### 14. Additional Listing/Product Images
 Ask only:
 **Please upload the remaining product/listing images.**
 
@@ -266,3 +274,9 @@ Set Name feedback requires the manufacturer's official name for the product set.
 ## Amazon Occasion
 
 Occasion is a controlled Amazon dropdown field. The optimized output may contain up to **5 selections**. Choose only occasions that are genuinely relevant to the product and supported by the listing/product context; do not add occasions solely for keyword coverage.
+
+
+## Amazon Product Details fields
+
+- **Set Name:** located under Product Details. Use the manufacturer's official name when available. If no official name exists, summarize the set type and number of components. Never invent an official manufacturer name. If not a set, treat it as not applicable.
+- **Holiday Type:** located under Product Details and selected from Amazon's controlled dropdown. Choose only culturally recognized collective celebrations that are genuinely associated with the product/context. Do not invent free-text holiday names or select holidays solely for keyword coverage.
