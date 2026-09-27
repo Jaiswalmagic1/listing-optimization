@@ -58,6 +58,16 @@ Common reasons to exclude a query include:
 
 Always show important exclusions before final generation and ask whether the seller wants to override them.
 
+## Amazon Seller Central field locations
+
+- Item Name: Product Identity.
+- Item Highlight: Product Identity.
+- Product Description: Description tab.
+- Bullet Points: Description tab.
+- Generic Keywords: Product Details.
+
+For this workflow, keep the optimized Amazon Item Name within **75 characters**. Important relevant details that do not fit naturally in the title should be considered for Item Highlight instead.
+
 ## Existing listing review
 
 Compare the current fields against the keyword evidence. Identify:
