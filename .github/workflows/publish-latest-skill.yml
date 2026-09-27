@@ -19,10 +19,10 @@ jobs:
       - name: Package latest skill
         run: |
           rm -rf package listing-optimization.zip
-          mkdir -p package/listing-optimization
-          cp -R skills/listing-optimization/. package/listing-optimization/
+          mkdir -p package/skills/listing-optimization
+          cp -R skills/listing-optimization/. package/skills/listing-optimization/
           cd package
-          zip -r ../listing-optimization.zip listing-optimization
+          zip -r ../listing-optimization.zip skills
 
       - name: Publish latest release
         env:
