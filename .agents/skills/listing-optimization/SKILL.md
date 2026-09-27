@@ -41,7 +41,9 @@ Ask only: **Please provide the current Item Name. You can find it in Amazon Sell
 Ask only: **Please provide the current Item Highlight. You can find it in Amazon Seller Central under Product Identity. It is a single field with a 125-character limit.**
 
 ### 7. Product Identity — Occasion
-Ask only: **Please provide the current Occasion selection. You can find it in Amazon Seller Central under Product Identity. Occasion allows up to 5 selections from the Amazon dropdown.**
+Amazon feedback definition: **Provide the specific event or celebration for which the jewelry item is designed or appropriate to wear.**
+
+Use Occasion for the specific event/celebration context of the jewelry item. Do not use it merely as a broad holiday or keyword field.
 
 ### 8. Description — Product Description
 Ask only: **Please provide the current Product Description. You can find it in Amazon Seller Central under Description.**
@@ -97,12 +99,12 @@ Return the following fields when applicable:
 
 1. **Updated Item Name** — maximum 75 characters.
 2. **Updated Item Highlight** — one single field, maximum 125 characters.
-3. **Updated Occasion** — up to 5 selections from Amazon's controlled dropdown.
+3. **Updated Occasion** — specific event/celebration selections appropriate to the jewelry item, using Amazon's available values.
 4. **Updated Product Description**.
 5. **Updated Bullet Points**.
 6. **Updated Generic Keywords**.
 7. **Updated Set Name** — under Product Details. Use the manufacturer's official name if supplied. If no official name exists, summarize the set type and number of components. Never invent an official manufacturer name. If the product is not a set, say Not applicable.
-8. **Updated Holiday Type** — under Product Details, selected from Amazon's controlled dropdown; choose only genuinely relevant culturally recognized celebrations.
+8. **Updated Holiday Type** — holiday/holidays genuinely associated with the item, using Amazon's available values and the definition above.
 9. **Updated Pendant Description** — maximum 100 characters, when applicable.
 
 Then provide brief **Optimization Notes** explaining the main keyword strategy, important changes, exclusions, and seller-approved overrides.
