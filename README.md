@@ -302,6 +302,14 @@ When adding marketplace rules, keep them in the relevant marketplace reference f
 Choose an appropriate open-source license before publishing this repository for public use.
 
 
+## Download the latest skill
+
+The repository automatically publishes the latest version of the portable skill whenever the `main` branch is updated.
+
+**[Download the latest Listing Optimization Skill ZIP](https://github.com/Jaiswalmagic1/listing-optimization/releases/latest/download/listing-optimization.zip)**
+
+The download contains the current `listing-optimization` skill folder and its marketplace reference files. You do not need to manually create the ZIP after future updates.
+
 ## Using the skill in ChatGPT
 
 If your ChatGPT workspace has Skills enabled:
