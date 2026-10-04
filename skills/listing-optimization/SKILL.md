@@ -94,39 +94,52 @@ Wait for the seller's response before generating the final listing.
 
 # Amazon Final Output
 
-Return the following fields when applicable:
+The final output MUST follow the same top-to-bottom sequence in which fields appear in the Amazon Seller Central listing editor/catalog. Do not reorder fields based on keyword importance or optimization priority.
 
+Use this section order:
+
+### 1. Product Identity
 1. **Updated Item Name** — maximum 75 characters.
 2. **Updated Item Highlight** — one single field, maximum 125 characters.
+
+### 2. Description
 3. **Updated Product Description**.
 4. **Updated Bullet Points**.
+
+### 3. Product Details
 5. **Updated Generic Keywords**.
 6. **Updated Set Name** — under Product Details. Use the manufacturer's official name if supplied. If no official name exists, summarize the set type and number of components. Never invent an official manufacturer name. If the product is not a set, say Not applicable.
 7. **Updated Occasion** — specific event/celebration selections appropriate to the jewelry item, using Amazon's available values.
 8. **Updated Holiday Type** — holiday/holidays genuinely associated with the item, using Amazon's available values.
+
+### 4. Other Applicable Listing Fields
 9. **Updated Pendant Description** — maximum 100 characters, when applicable.
+
+If the marketplace UI provides additional listing sections such as Offer or Safety & Compliance, do not invent fields or move unrelated fields into the output unless the corresponding marketplace reference explicitly requires them.
 
 ## Mandatory Before-vs-Updated Comparison
 
 After the exclusion-review approval and before/alongside the final optimized listing, ALWAYS provide a comparison table showing the seller's original value and the proposed updated value.
 
-Use this structure:
+The comparison table MUST use the same listing-catalog sequence as the final output:
 
-| Field | Previous Value | Updated Value |
-|---|---|---|
-| Item Name | Original value | Proposed value |
-| Item Highlight | Original value | Proposed value |
-| Product Description | Original value | Proposed value |
-| Bullet Points | Original value | Proposed value |
-| Generic Keywords | Original value | Proposed value |
-| Set Name | Original value | Proposed value |
-| Occasion | Original value | Proposed value |
-| Holiday Type | Original value | Proposed value |
-| Pendant Description | Original value | Proposed value |
+| Section | Field | Previous Value | Updated Value |
+|---|---|---|---|
+| Product Identity | Item Name | Original value | Proposed value |
+| Product Identity | Item Highlight | Original value | Proposed value |
+| Description | Product Description | Original value | Proposed value |
+| Description | Bullet Points | Original value | Proposed value |
+| Product Details | Generic Keywords | Original value | Proposed value |
+| Product Details | Set Name | Original value | Proposed value |
+| Product Details | Occasion | Original value | Proposed value |
+| Product Details | Holiday Type | Original value | Proposed value |
+| Other Applicable Fields | Pendant Description | Original value | Proposed value |
 
-Include only applicable fields, but do not omit a field merely because the value is unchanged. If no change is recommended, write **No Change** in the Updated Value column. Preserve the complete previous value where practical; for long fields, clearly identify the original content without misleadingly truncating it.
+Do not reorder rows. Include every applicable field, even when unchanged. If no change is recommended, write **No Change** in the Updated Value column. Preserve the complete previous value where practical; for long fields, clearly identify the original content without misleadingly truncating it.
 
-Then provide the final optimized fields in copy-ready form.
+Then provide the final optimized fields in the exact same catalog sequence, grouped by section, in copy-ready form.
+
+Then provide brief **Optimization Notes** explaining the main keyword strategy, important changes, exclusions, seller-approved overrides, and any fields intentionally left unchanged.
 
 Then provide brief **Optimization Notes** explaining the main keyword strategy, important changes, exclusions, seller-approved overrides, and any fields intentionally left unchanged.
 
